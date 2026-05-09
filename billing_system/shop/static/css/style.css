@@ -1,0 +1,117 @@
+/* GOOGLE FONT */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+
+/* BACKGROUND */
+
+body{
+background: linear-gradient(135deg,#4facfe,hsl(267, 51%, 19%));
+min-height:100vh;
+}
+
+
+/* GLASS EFFECT */
+
+.glass{
+background: rgba(255,255,255,0.15);
+backdrop-filter: blur(10px);
+border-radius:15px;
+border:1px solid rgba(255,255,255,0.2);
+padding:25px;
+box-shadow:0 8px 32px rgba(0,0,0,0.2);
+}
+
+
+/* NAVBAR */
+
+.navbar{
+background: rgba(0,0,0,0.4);
+backdrop-filter: blur(8px);
+}
+
+.navbar-brand{
+font-weight:600;
+color:white;
+}
+
+
+/* DASHBOARD CARDS */
+
+.card-dashboard{
+padding:20px;
+border-radius:15px;
+color:white;
+text-align:center;
+font-size:50px;
+font-weight:500;
+background:linear-gradient(135deg,#667eea,#764ba2);
+transition:0.3s;
+}
+
+.card-dashboard:hover{
+transform:translateY(-5px);
+}
+
+
+/* TABLE */
+
+.table{
+background:white;
+border-radius:10px;
+overflow:hidden;
+}
+
+.table th{
+background:#2c3e50;
+color:white;
+}
+
+
+/* BUTTONS */
+
+.btn-modern{
+background:#667eea;
+color:white;
+border:none;
+border-radius:9px;
+padding:9px 17px;
+transition:0.3s;
+}
+
+.btn-modern:hover{
+background:#5a67d8;
+}
+
+
+/* INPUT */
+
+input,select{
+border-radius:6px !important;
+border:1px solid #ccc !important;
+padding:8px;
+}
+
+
+/* SEARCH BAR */
+
+.search-box{
+width:300px;
+margin-bottom:15px;
+}
+
+
+/* INVOICE */
+
+.invoice{
+background:white;
+padding:30px;
+border-radius:10px;
+}

@@ -1,0 +1,46 @@
+{% extends 'shop/base.html' %}
+
+{% block content %}
+
+<div class="glass">
+
+<h3>Products</h3>
+
+<input type="text" class="form-control search-box" placeholder="Search Product...">
+
+<table class="table mt-3">
+
+<tr>
+
+<th>Name</th>
+<th>Price</th>
+<th>Stock</th>
+<th>Actions</th>
+
+</tr>
+
+{% for product in products %}
+
+<tr>
+
+<td>{{product.name}}</td>
+<td>{{product.price}}</td>
+<td>{{product.stock}}</td>
+
+<td>
+
+<a href="/edit-product/{{product.id}}" class="btn btn-warning btn-sm">Edit</a>
+
+<a href="/delete-product/{{product.id}}" class="btn btn-danger btn-sm">Delete</a>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</div>
+
+{% endblock %}

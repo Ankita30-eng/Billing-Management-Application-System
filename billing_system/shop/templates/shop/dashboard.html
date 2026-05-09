@@ -1,0 +1,45 @@
+{% extends 'shop/base.html' %}
+
+{% block content %}
+
+<div class="glass">
+
+<h2 class="mb-4">Dashboard</h2>
+
+<div class="row">
+
+<div class="col-md-4">
+
+<div class="card-dashboard">
+Total Products
+<br>
+{{product_count}}
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="card-dashboard">
+Total Bills
+<br>
+{{bill_count}}
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="card-dashboard">
+Total Revenue
+<br>
+₹ {{revenue}}
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+{% endblock %}

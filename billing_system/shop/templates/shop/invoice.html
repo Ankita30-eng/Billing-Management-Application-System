@@ -1,0 +1,43 @@
+{% extends 'shop/base.html' %}
+
+{% block content %}
+
+<div class="invoice">
+
+<h2>Invoice</h2>
+
+<p><b>Customer:</b> {{bill.customer_name}}</p>
+
+<p><b>Date:</b> {{bill.date}}</p>
+
+<table class="table">
+
+<tr>
+<th>Product</th>
+<th>Quantity</th>
+<th>Subtotal</th>
+</tr>
+
+{% for item in items %}
+
+<tr>
+
+<td>{{item.product.name}}</td>
+<td>{{item.quantity}}</td>
+<td>{{item.subtotal}}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<h3>Total: ₹ {{bill.total_amount}}</h3>
+
+<button onclick="window.print()" class="btn btn-primary">
+Print Bill
+</button>
+
+</div>
+
+{% endblock %}

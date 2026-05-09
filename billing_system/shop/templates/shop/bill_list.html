@@ -1,0 +1,46 @@
+{% extends 'shop/base.html' %}
+
+{% block content %}
+
+<div class="glass">
+
+<h3>Bill History</h3>
+
+<table class="table">
+
+<tr>
+
+<th>Customer</th>
+<th>Date</th>
+<th>Total</th>
+<th>Invoice</th>
+
+</tr>
+
+{% for bill in bills %}
+
+<tr>
+
+<td>{{bill.customer_name}}</td>
+<td>{{bill.date}}</td>
+<td>{{bill.total_amount}}</td>
+
+<td>
+
+<a href="/invoice/{{bill.id}}" class="btn btn-modern btn-sm">
+
+View Invoice
+
+</a>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'shop/base.html' %}
+
+{% block content %}
+
+<div class="glass">
+
+<h3>Create Bill</h3>
+
+<form method="post">
+
+{% csrf_token %}
+
+<input type="text" name="customer" placeholder="Customer Name" class="form-control mb-3">
+
+<table class="table">
+
+<tr>
+
+<th>Product</th>
+<th>Price</th>
+<th>Quantity</th>
+
+</tr>
+
+{% for product in products %}
+
+<tr>
+
+<td>{{product.name}}</td>
+<td>{{product.price}}</td>
+
+<td>
+
+<input type="number" name="{{product.id}}" value="0" min="0">
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<label>GST (%)</label>
+
+<input type="number" name="gst" class="form-control mb-3" value="18">
+
+<button class="btn btn-modern">Generate Bill</button>
+
+</form>
+
+</div>
+
+{% endblock %}
